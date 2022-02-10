@@ -11,7 +11,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then((resp) => resp.json())
       .then((robots) => {
         return this.setState({ robots: robots });
@@ -20,10 +20,11 @@ class App extends React.Component {
   }
 
   render() {
+    const { robots } = this.state;
     return (
       <div className="tc">
         <h1>Robofriends</h1>
-        <CardList />
+        <CardList robots={robots} />
       </div>
     );
   }

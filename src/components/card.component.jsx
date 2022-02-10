@@ -3,13 +3,13 @@
 // for a randomly generated robot from
 // https://robohash.org
 
-const Card = () => {
+const Card = ({ id, name, email }) => {
   return (
     <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
-      <img alt="Robot" src={`https://robohash.org/test/?size=200x200`} />
+      <img alt="Robot" src={`https://robohash.org/${id}/?size=150x150`} />
       <div>
-        <h2>Name</h2>
-        <p>Email</p>
+        <h2>{name}</h2>
+        <p>{email}</p>
       </div>
     </div>
   );
