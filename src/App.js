@@ -2,6 +2,7 @@ import React from "react";
 import CardList from "./components/cardlist.component";
 import SearchBox from "./components/searchbox.component";
 import Scroll from "./components/scroll.component";
+import Spinner from "./components/spinner.component";
 
 class App extends React.Component {
   constructor() {
@@ -30,7 +31,9 @@ class App extends React.Component {
     const filteredRobots = robots.filter((robot) => {
       return robot.name.toLowerCase().includes(searchField.toLocaleLowerCase());
     });
-    return (
+    return !robots.length ? (
+      <Spinner />
+    ) : (
       <div className="tc">
         <h1>Robofriends</h1>
         <SearchBox searchChange={this.onSearchChange} />

@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #00d2ff, #928dab);
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+@keyframes circle {
+  25% {
+    transform: rotate(140deg);
+    border-style: double dotted;
+    border-color: #2166a3 #3e7fba #88b8e4 #bbd9f4;
+  }
+  50% {
+    transform: rotate(270deg);
+  }
+}
+
+.spinning::before {
+  content: "";
+  color: white;
+  height: 100px;
+  width: 100px;
+  background: transparent;
+  border-radius: 100%;
+  border: 10px solid #55b7e0;
+  animation: circle 1s infinite;
+}
