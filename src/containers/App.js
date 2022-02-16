@@ -1,9 +1,9 @@
 import React from "react";
-import CardList from "./components/cardlist.component";
-import SearchBox from "./components/searchbox.component";
-import Scroll from "./components/scroll.component";
-import Spinner from "./components/spinner.component";
-import ErrorBoundary from "./components/errorboundary.component";
+import CardList from "../components/cardlist.component";
+import SearchBox from "../components/searchbox.component";
+import Scroll from "../components/scroll.component";
+import Spinner from "../components/spinner.component";
+import ErrorBoundary from "../components/errorboundary.component";
 
 class App extends React.Component {
   constructor() {
